@@ -4,6 +4,9 @@ module.exports = {
   images: {
     domains: ['res.cloudinary.com'],
   },
+  env: {
+    NEXT_BACKEND_URL: process.env.NEXT_BACKEND_URL,
+  },
   async redirects() {
     return [
       {
