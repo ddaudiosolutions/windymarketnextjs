@@ -1,1 +1,18 @@
-service: my-next-app
+{
+  "service": "my-next-app",
+  "build": {
+    "builder": "node",
+    "path": ".",
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "preDeploy": "npm install && npm run build"
+  },
+  "start": {
+    "command": "npm start",
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": "3000"
+    }
+  }
+}
